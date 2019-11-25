@@ -1,3 +1,4 @@
+import random
 # Collections
 
 # __ __ __LISTS // Arrays __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
@@ -5,6 +6,7 @@
 # Mutable - YES (we can change it :)                                      __
 # Duplicate Items - YES                                                   __
 #                                                                         __
+
 colors = ["red", "orange", "yellow"]
 #                                                                         __
 # Add vs Insert                                                           __
@@ -95,3 +97,35 @@ grades.popitem()  # Removes last item in list
 print(len(grades))
 #                                                                         __
 # __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+
+
+cool_list = [random.randint(-25, 25) for i in range(10)]
+print(cool_list)
+new_list = [l for l in cool_list if l >= 0]
+print(new_list)
+
+
+food = ("Rice", "Ground Beef", "Broccoli")
+for fav_food in food:
+    print(fav_food)
+
+
+cool_set = {random.randint(1, 100) for i in range(50)}
+
+for number in cool_set:
+    if number == 50:
+        print("Has 50")
+
+
+favorite_sports = {
+    "Football": 5,
+    "Soccer": 4,
+    "Crossfit": 3,
+    "Running": 2,
+    "Swimming": 1
+}
+
+favorite_sports.pop("Swimming")
+favorite_sports["Running"] = 3
+
+print(favorite_sports)
